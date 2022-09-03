@@ -3,7 +3,7 @@ from rest_framework import serializers
 
 
 class CurrentUserSerializer(UserDetailsSerializer):
-    is_staff = serializers.ReadOnlyField(source='profile.id')
+    is_staff = serializers.ReadOnlyField(source='owner.is_staff')
     profile_id = serializers.ReadOnlyField(source='profile.id')
     profile_image = serializers.ReadOnlyField(source='profile.image.url')
 
