@@ -13,3 +13,8 @@ class AlbumList(generics.ListCreateAPIView):
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
+
+class AlbumDetail(generics.RetrieveUpdateDestroyAPIView):
+    permission_classes = [IsOwnerOrReadOnly]
+    serializer_class = AlbumSerializer
+    queryset = Album.objects.all().order_by('-created_at')
