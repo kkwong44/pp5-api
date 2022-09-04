@@ -104,9 +104,9 @@ INSTALLED_APPS = [
     'corsheaders',
     'profiles',
     'posts',
+    'albums',
     'comments',
     'photos',
-    'albums',
     'likes',
     'followers',
 ]
