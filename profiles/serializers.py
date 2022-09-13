@@ -33,4 +33,5 @@ class ProfileSerializer(serializers.ModelSerializer):
             'id', 'owner', 'staff', 'created_at', 'updated_at', 'name',
             'content', 'image', 'is_owner', 'following_id',
             'posts_count', 'followers_count', 'following_count',
+            'first_name', 'last_name', 'email',
         ]
